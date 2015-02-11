@@ -23,7 +23,7 @@ def load_conf(conf_file):
     return json_data
 
 def fetch_harvest(url):
-    ''' fetch and harvest domains from text '''
+    ''' fetch and harvest domains from remote text '''
     try:
         req = requests.get(url, timeout=30)
     except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as error:
@@ -115,7 +115,7 @@ def main():
                 print(str(error))
 
         if sources:
-            print('Sleeping for 1 hour due to connection problem.')
+            print('Connection problem: Sleeping for 1 hour')
             time.sleep(3600)
 
 if __name__ == '__main__':
