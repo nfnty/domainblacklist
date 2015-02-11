@@ -18,14 +18,55 @@ def load_conf(conf_file):
         json_data = json.load(open(os.path.join(CONFDIR, conf_file)))
     except (OSError, ValueError) as error:
         print('Error: ' + conf_file)
-        print('Error: ' + error)
+        print(str(error))
         sys.exit(1)
     return json_data
+
+def fetch_harvest(url):
+    ''' fetch and harvest domains from text '''
+    try:
+        req = requests.get(url, timeout=30)
+    except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as error:
+        print(str(error))
+        return False
+
+    harvested_domains = []
+    for line in req.text.splitlines():
+        line = line.partition('#')[0]
+        if line.strip():
+            harvested_domains.append(line.split()[-1])
+
+    return harvested_domains
+
+def encode_check_domain(domain, regex, invalid, excluded):
+    ''' encode and check domain '''
+    try:
+        encoded = domain.encode('idna').decode('UTF-8')
+    except UnicodeError as error:
+        print('Error: "' + domain + '"')
+        print(str(error))
+        return False
+    if domain != encoded:
+        print('Before: "' + domain + '"')
+        print('After: "' + encoded + '"')
+
+    if len(encoded) > 253 \
+            or encoded in invalid \
+            or not regex.fullmatch(encoded):
+        print('Invalid: "' + encoded + '"')
+        return False
+
+    if encoded in excluded:
+        print('Excluded: "' + encoded + '"')
+        return False
+
+    return encoded
 
 def main():
     ''' main func '''
 
     sources = load_conf('sources.json')['sources']
+    sources.reverse()
     invalid_domains = load_conf('invalid.json')['domains']
     excluded_domains = load_conf('excluded.json')['domains']
 
@@ -38,58 +79,44 @@ def main():
     )
 
     while sources:
-        for source_name, source_url in list(sources):
-            print('### ' + source_name + ' ###')
+        sources_length = len(sources)
+        for _ in range(sources_length):
+            source = sources.pop()
+            print('### ' + source['name'] + ' ###')
 
-            try:
-                req = requests.get(source_url, timeout=30)
-            except requests.exceptions.Timeout as error:
-                print(error)
+            harvested_domains = fetch_harvest(source['url'])
+            if not harvested_domains:
+                sources.insert(0, source)
                 continue
 
-            lines = []
-            for line in req.text.splitlines():
-                line = line.partition('#')
-                if line[0].strip():
-                    lines.append(line[0].split())
+            try:
+                with open(os.path.join(DESTDIR, source['name']), 'w') as hosts_file:
+                    for domain in harvested_domains:
+                        domain_encoded = encode_check_domain(
+                            domain, domain_regex, invalid_domains, excluded_domains
+                        )
+                        if domain_encoded:
+                            hosts_file.write('0.0.0.0 ' + domain_encoded + '\n')
+            except OSError as error:
+                print(str(error))
+                sys.exit(1)
 
-            with open(os.path.join(DESTDIR, source_name), 'w') as hosts_file:
-                for line in lines:
-                    try:
-                        domain_name = line[-1].encode('idna').decode('UTF-8')
-                    except UnicodeError as error:
-                        print('Error: ' + error)
-                        print('Error: "' + line[-1] + '"')
-                        continue
-                    if line[-1] != domain_name:
-                        print('Before: "' + line[-1] + '"')
-                        print('After: "' + domain_name + '"')
+        if sources_length != len(sources):
+            try:
+                subprocess.check_call([
+                    '/usr/bin/pkill',
+                    '--uid', 'dnsmasq',
+                    '--group', 'dnsmasq',
+                    '--exact',
+                    '--signal', 'SIGHUP',
+                    'dnsmasq',
+                ])
+            except subprocess.CalledProcessError as error:
+                print(str(error))
 
-                    if len(domain_name) > 253 \
-                            or domain_name in invalid_domains \
-                            or not domain_regex.fullmatch(domain_name):
-                        print('Invalid: "' + domain_name + '"')
-                        continue
-
-                    if domain_name in excluded_domains:
-                        print('Excluded: "' + domain_name + '"')
-                        continue
-
-                    hosts_file.write('0.0.0.0 ' + domain_name + '\n')
-
-            sources.remove((source_name, source_url))
-
-        subprocess.call([
-            '/usr/bin/pkill',
-            '--uid', 'dnsmasq',
-            '--group', 'dnsmasq',
-            '--exact',
-            '--signal', 'SIGHUP',
-            'dnsmasq',
-        ])
         if sources:
-            print('Sleeping for 600 seconds due to timeout.')
-            time.sleep(1800)
+            print('Sleeping for 1 hour due to connection problem.')
+            time.sleep(3600)
 
 if __name__ == '__main__':
     main()
