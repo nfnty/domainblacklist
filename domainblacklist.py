@@ -8,8 +8,8 @@ import time
 import json
 import sys
 
-DESTDIR = '/srv/docker/powerdns-recursor/config/blacklist'
-CONFIGDIR = '/etc/hostsupdate'
+CONFIGDIR = sys.argv[1]
+DESTDIR = sys.argv[2]
 
 DOMAIN_REGEX = re.compile(
     r'^' +
@@ -82,6 +82,12 @@ def domain_validate(domain, invalid, excluded):
 
 def main():
     ''' Main '''
+
+    try:
+        os.stat(DESTDIR)
+        print('Directory already exists: ' + DESTDIR)
+    except FileNotFoundError:
+        os.mkdir(DESTDIR)
 
     sources = config_load(os.path.join(CONFIGDIR, 'sources.json'))['sources']
     sources.reverse()
