@@ -1,5 +1,5 @@
 #!/usr/bin/python3 -u
-''' update domain blocking hosts '''
+''' Parse domain lists into blacklists '''
 
 import requests
 import os
