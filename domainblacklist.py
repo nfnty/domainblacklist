@@ -13,9 +13,8 @@ DESTDIR = sys.argv[2]
 
 DOMAIN_REGEX = re.compile(
     r'^' +
-    r'(?:[A-Za-z0-9-_]{1,63}\.)*' +
-    r'(?:(?!-)[A-Za-z0-9-]{1,63}(?<!-)\.)' +
-    r'(?:(?!-)[A-Za-z0-9-]{2,63}(?<!-))' +
+    r'(?:(?!-)[A-Za-z0-9-]{1,63}(?<!-)\.)+' +
+    r'(?:(?!-)[A-Za-z0-9-]{2,63}(?<!-)\.?)' +
     r'$'
 )
 
@@ -43,7 +42,7 @@ def remote_parse(url):
         if line.strip():
             lines.append(line.split()[-1])
 
-    return lines
+    return list(set(lines))
 
 def domain_encode(domain):
     ''' Encode domain '''
