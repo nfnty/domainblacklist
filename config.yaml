@@ -5,18 +5,18 @@ Timeout:
     Read: 61
 
 Sources:
-    'malwaredomainlist_com': 'http://www.malwaredomainlist.com/hostslist/hosts.txt'
+    'malwaredomainlist_com': 'https://www.malwaredomainlist.com/hostslist/hosts.txt'
     'someonewhocares_org': 'http://someonewhocares.org/hosts/zero/hosts'
     'mvps_org': 'http://winhelp2002.mvps.org/hosts.txt'
-    'pgl_yoyo_org': 'http://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext'
-    'hosts-file_net_ad_servers': 'http://hosts-file.net/ad_servers.txt'
-    'hosts-file_net_emd': 'http://hosts-file.net/emd.txt'
-    'hosts-file_net_exp': 'http://hosts-file.net/exp.txt'
-    'hosts-file_net_fsa': 'http://hosts-file.net/fsa.txt'
-    'hosts-file_net_hjk': 'http://hosts-file.net/hjk.txt'
-    'hosts-file_net_pha': 'http://hosts-file.net/pha.txt'
-    'hosts-file_net_psh': 'http://hosts-file.net/psh.txt'
-    'malwaredomains_com': 'http://mirror1.malwaredomains.com/files/justdomains'
+    'pgl_yoyo_org': 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext'
+    'hosts-file_net_ad_servers': 'https://hosts-file.net/ad_servers.txt'
+    'hosts-file_net_emd': 'https://hosts-file.net/emd.txt'
+    'hosts-file_net_exp': 'https://hosts-file.net/exp.txt'
+    'hosts-file_net_fsa': 'https://hosts-file.net/fsa.txt'
+    'hosts-file_net_hjk': 'https://hosts-file.net/hjk.txt'
+    'hosts-file_net_pha': 'https://hosts-file.net/pha.txt'
+    'hosts-file_net_psh': 'https://hosts-file.net/psh.txt'
+    'malwaredomains_com': 'https://mirror.cedia.org.ec/malwaredomains/justdomains'
 
 Exclude:
     - 'localhost.localdomain'
