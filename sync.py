@@ -68,10 +68,6 @@ def domain_validate(domain):
         print('Regex error: {0:s}'.format(domain))
         return False
 
-    if domain in CONFIG['Exclude']:
-        print('Excluded: {0:s}'.format(domain))
-        return False
-
     return True
 
 

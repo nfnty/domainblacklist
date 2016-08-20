@@ -17,13 +17,3 @@ Sources:
     'hosts-file_net_pha': 'https://hosts-file.net/pha.txt'
     'hosts-file_net_psh': 'https://hosts-file.net/psh.txt'
     'malwaredomains_com': 'https://mirror.cedia.org.ec/malwaredomains/justdomains'
-
-Exclude:
-    - 'localhost.localdomain'
-    - 's3.amazonaws.com'
-    - 'metrics.expressen.se'
-    - 'www.opensubtitles.org'
-    - 'opensubtitles.org'
-    - 'bitcointalk.org'
-    - 'www.bitcointalk.org'
-    - 'yui.yahooapis.com'
