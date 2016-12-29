@@ -10,7 +10,8 @@ import time
 import requests
 import yaml
 
-PATH_DESTDIR = sys.argv[1]
+
+TIMEOUT = (31, 181)  # (Connect, Read)
 
 CONFIG = yaml.load(
     open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'config.yaml')),
@@ -28,8 +29,7 @@ DOMAIN_REGEX = re.compile(
 def remote_parse(url):
     ''' Get remote and parse lines into array '''
     try:
-        request = requests.get(url,
-                               timeout=(CONFIG['Timeout']['Connect'], CONFIG['Timeout']['Read']))
+        request = requests.get(url, timeout=TIMEOUT)
     except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as error:
         print(str(error))
         return None
@@ -103,5 +103,7 @@ def main():
             print('Sleeping for {0:d} seconds'.format(CONFIG['Sleep']))
             time.sleep(CONFIG['Sleep'])
 
+
 if __name__ == '__main__':
+    PATH_DESTDIR = sys.argv[1]
     main()

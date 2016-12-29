@@ -1,23 +1,35 @@
 Sleep: 750
-Timeout:
-    # slightly larger than a multiple of 3, which is the default TCP packet retransmission window
-    Connect: 31
-    Read: 61
 
 Sources:
+    # Malware
     'malwaredomainlist_com': 'https://www.malwaredomainlist.com/hostslist/hosts.txt'
-    'someonewhocares_org': 'http://someonewhocares.org/hosts/zero/hosts'
+    # General
+    'someonewhocares_org': 'http://someonewhocares.org/hosts/hosts'
+    # General
     'mvps_org': 'http://winhelp2002.mvps.org/hosts.txt'
+    # Ads, Tracking
     'pgl_yoyo_org': 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext'
+    # Ads, Tracking
     'hosts-file_net_ats': 'https://hosts-file.net/ad_servers.txt'
+    # Malware
     'hosts-file_net_emd': 'https://hosts-file.net/emd.txt'
+    # Exploits
     'hosts-file_net_exp': 'https://hosts-file.net/exp.txt'
+    # Fraud
     'hosts-file_net_fsa': 'https://hosts-file.net/fsa.txt'
+    # Spamming, Astroturfing
     'hosts-file_net_grm': 'https://hosts-file.net/grm.txt'
+    # Spamming hpHosts forums
     'hosts-file_net_hfs': 'https://hosts-file.net/hfs.txt'
+    # Hijacking
     'hosts-file_net_hjk': 'https://hosts-file.net/hjk.txt'
+    # Misleading marketing
     'hosts-file_net_mmt': 'https://hosts-file.net/mmt.txt'
+    # Illegal pharmacy
     'hosts-file_net_pha': 'https://hosts-file.net/pha.txt'
+    # Phishing
     'hosts-file_net_psh': 'https://hosts-file.net/psh.txt'
+    # Malware
     'malwaredomains_com': 'https://mirror.cedia.org.ec/malwaredomains/justdomains'
+    # Adware, Malware
     'StevenBlack': 'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts'
