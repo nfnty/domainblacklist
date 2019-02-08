@@ -31,5 +31,89 @@ Sources:
     'hosts-file_net_psh': 'https://hosts-file.net/psh.txt'
     # Malware
     'malwaredomains_com': 'https://mirror.cedia.org.ec/malwaredomains/justdomains'
+    'malwaredomains_com_immortal': 'https://mirror.cedia.org.ec/malwaredomains/immortal_domains.txt'
     # Adware, Malware
-    'StevenBlack': 'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts'
+    'StevenBlack_hosts': 'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts'
+    # Fraud/adware/scam
+    'StevenBlack_KADhosts': 'https://raw.githubusercontent.com/StevenBlack/hosts/master/data/KADhosts/hosts'
+    # Windows installers ads
+    'StevenBlack_UncheckyAds': 'https://raw.githubusercontent.com/StevenBlack/hosts/master/data/UncheckyAds/hosts'
+    # 2o7Net tracking sites
+    'StevenBlack_add_2o7Net': 'https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.2o7Net/hosts'
+    # Risk content
+    'StevenBlack_add_Risk': 'https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Risk/hosts'
+    # Spam
+    'StevenBlack_add_Spam': 'https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Spam/hosts'
+    # Ads
+    'sysctl_org': 'http://sysctl.org/cameleon/hosts'
+    # Ads, Tracking
+    'adaway_org': 'https://adaway.org/hosts.txt'
+    # Threats, Espionage
+    'ethanr': 'https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt'
+    # Tracking
+    'quidsup_blocklist': 'https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt'
+    # Malware
+    'quidsup_malware': 'https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt'
+    # Ads, Tracking
+    'hostsfile_org': 'https://hostsfile.org/Downloads/hosts.txt'
+    # Phishing
+    'phishing_army': 'https://phishing.army/download/phishing_army_blocklist_extended.txt'
+    # Ransomware
+    'ransomwaretracker_abuse_ch': 'https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt'
+    'ransomwaretracker_abuse_ch_cw': 'https://ransomwaretracker.abuse.ch/downloads/CW_C2_DOMBL.txt'
+    'ransomwaretracker_abuse_ch_ly': 'https://ransomwaretracker.abuse.ch/downloads/LY_C2_DOMBL.txt'
+    'ransomwaretracker_abuse_ch_tc': 'https://ransomwaretracker.abuse.ch/downloads/TC_C2_DOMBL.txt'
+    'ransomwaretracker_abuse_ch_tl': 'https://ransomwaretracker.abuse.ch/downloads/TL_C2_DOMBL.txt'
+    # Spam, Ads
+    'Dawsey21': 'https://raw.githubusercontent.com/Dawsey21/Lists/master/main-blacklist.txt'
+    # Phishing
+    'HorusTeknoloji': 'https://raw.githubusercontent.com/HorusTeknoloji/TR-PhishingList/master/url-lists.txt'
+    # Tracking
+    'Perflyst_smarttv': 'https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt'
+    'Perflyst_android': 'https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt'
+    # Ads, Tracking
+    'anudeepND': 'https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt'
+    # Tracking
+    'crazy-max': 'https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt'
+    # Spam
+    'matomo-org': 'https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt'
+    # Ads
+    'vokins': 'https://raw.githubusercontent.com/vokins/yhosts/master/hosts'
+    # Ads
+    'reddestdream': 'https://reddestdream.github.io/Projects/MinimalHosts/etc/MinimalHostsBlocker/minimalhosts'
+    # Ads
+    'disconnect_me_ad': 'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt'
+    # Adware, Malware
+    'disconnect_me_malvertising': 'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt'
+    # Ads
+    'firebog_net_adguard': 'https://v.firebog.net/hosts/AdguardDNS.txt'
+    # Suspicious
+    'firebog_net_billstearns': 'https://v.firebog.net/hosts/BillStearns.txt'
+    # Ads
+    'firebog_net_easylist': 'https://v.firebog.net/hosts/Easylist.txt'
+    # Tracking
+    'firebog_net_easyprivacy': 'https://v.firebog.net/hosts/Easyprivacy.txt'
+    # Ads
+    'firebog_net_prigent_ads': 'https://v.firebog.net/hosts/Prigent-Ads.txt'
+    # Malware
+    'firebog_net_prigent_malware': 'https://v.firebog.net/hosts/Prigent-Malware.txt'
+    # Phishing
+    'firebog_net_prigent_phishing': 'https://v.firebog.net/hosts/Prigent-Phishing.txt'
+    # Malware
+    'firebog_net_shalla_mal': 'https://v.firebog.net/hosts/Shalla-mal.txt'
+    # Suspicious
+    'firebog_net_w3kbl': 'https://v.firebog.net/hosts/static/w3kbl.txt'
+    # Suspicious
+    'dshield_org_low': 'https://www.dshield.org/feeds/suspiciousdomains_Low.txt'
+    'dshield_org_medium': 'https://www.dshield.org/feeds/suspiciousdomains_Medium.txt'
+    'dshield_org_high': 'https://www.dshield.org/feeds/suspiciousdomains_High.txt'
+    # Suspicious
+    'joewein_net': 'https://www.joewein.net/dl/bl/dom-bl-base.txt'
+    # Ads
+    'squidblacklist_org_ads': 'https://www.squidblacklist.org/downloads/dg-ads.acl'
+    # Malware
+    'squidblacklist_org_malicious': 'https://www.squidblacklist.org/downloads/dg-malicious.acl'
+    # Coin miners
+    'zerodot1': 'https://zerodot1.gitlab.io/CoinBlockerLists/hosts'
+    # Malware
+    'zeustracker_abuse_ch': 'https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist'
