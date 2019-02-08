@@ -107,8 +107,6 @@ Sources:
     'dshield_org_low': 'https://www.dshield.org/feeds/suspiciousdomains_Low.txt'
     'dshield_org_medium': 'https://www.dshield.org/feeds/suspiciousdomains_Medium.txt'
     'dshield_org_high': 'https://www.dshield.org/feeds/suspiciousdomains_High.txt'
-    # Suspicious
-    'joewein_net': 'https://www.joewein.net/dl/bl/dom-bl-base.txt'
     # Ads
     'squidblacklist_org_ads': 'https://www.squidblacklist.org/downloads/dg-ads.acl'
     # Malware
