@@ -54,8 +54,6 @@ Sources:
     'quidsup_blocklist': 'https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt'
     # Malware
     'quidsup_malware': 'https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt'
-    # Ads, Tracking
-    'hostsfile_org': 'https://hostsfile.org/Downloads/hosts.txt'
     # Phishing
     'phishing_army': 'https://phishing.army/download/phishing_army_blocklist_extended.txt'
     # Ransomware
