@@ -64,8 +64,6 @@ Sources:
     'ransomwaretracker_abuse_ch_tl': 'https://ransomwaretracker.abuse.ch/downloads/TL_C2_DOMBL.txt'
     # Spam, Ads
     'Dawsey21': 'https://raw.githubusercontent.com/Dawsey21/Lists/master/main-blacklist.txt'
-    # Phishing
-    'HorusTeknoloji': 'https://raw.githubusercontent.com/HorusTeknoloji/TR-PhishingList/master/url-lists.txt'
     # Tracking
     'Perflyst_smarttv': 'https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt'
     'Perflyst_android': 'https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt'
