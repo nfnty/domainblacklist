@@ -107,7 +107,5 @@ Sources:
     'squidblacklist_org_ads': 'https://www.squidblacklist.org/downloads/dg-ads.acl'
     # Malware
     'squidblacklist_org_malicious': 'https://www.squidblacklist.org/downloads/dg-malicious.acl'
-    # Coin miners
-    'zerodot1': 'https://zerodot1.gitlab.io/CoinBlockerLists/hosts'
     # Malware
     'zeustracker_abuse_ch': 'https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist'
