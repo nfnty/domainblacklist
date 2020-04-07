@@ -4,31 +4,11 @@ Sources:
     # Malware
     'malwaredomainlist_com': 'https://www.malwaredomainlist.com/hostslist/hosts.txt'
     # General
-    'someonewhocares_org': 'http://someonewhocares.org/hosts/hosts'
+    'someonewhocares_org': 'https://someonewhocares.org/hosts/hosts'
     # General
-    'mvps_org': 'http://winhelp2002.mvps.org/hosts.txt'
+    'mvps_org': 'https://winhelp2002.mvps.org/hosts.txt'
     # Ads, Tracking
     'pgl_yoyo_org': 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext'
-    # Ads, Tracking
-    'hosts-file_net_ats': 'https://hosts-file.net/ad_servers.txt'
-    # Malware
-    'hosts-file_net_emd': 'https://hosts-file.net/emd.txt'
-    # Exploits
-    'hosts-file_net_exp': 'https://hosts-file.net/exp.txt'
-    # Fraud
-    'hosts-file_net_fsa': 'https://hosts-file.net/fsa.txt'
-    # Spamming, Astroturfing
-    'hosts-file_net_grm': 'https://hosts-file.net/grm.txt'
-    # Spamming hpHosts forums
-    'hosts-file_net_hfs': 'https://hosts-file.net/hfs.txt'
-    # Hijacking
-    'hosts-file_net_hjk': 'https://hosts-file.net/hjk.txt'
-    # Misleading marketing
-    'hosts-file_net_mmt': 'https://hosts-file.net/mmt.txt'
-    # Illegal pharmacy
-    'hosts-file_net_pha': 'https://hosts-file.net/pha.txt'
-    # Phishing
-    'hosts-file_net_psh': 'https://hosts-file.net/psh.txt'
     # Malware
     'malwaredomains_com': 'https://mirror.cedia.org.ec/malwaredomains/justdomains'
     'malwaredomains_com_immortal': 'https://mirror.cedia.org.ec/malwaredomains/immortal_domains.txt'
@@ -45,19 +25,11 @@ Sources:
     # Spam
     'StevenBlack_add_Spam': 'https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Spam/hosts'
     # Ads
-    'sysctl_org': 'http://sysctl.org/cameleon/hosts'
+    'sysctl_org': 'https://sysctl.org/cameleon/hosts'
     # Ads, Tracking
     'adaway_org': 'https://adaway.org/hosts.txt'
     # Threats, Espionage
     'ethanr': 'https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt'
-    # Phishing
-    'phishing_army': 'https://phishing.army/download/phishing_army_blocklist_extended.txt'
-    # Ransomware
-    'ransomwaretracker_abuse_ch': 'https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt'
-    'ransomwaretracker_abuse_ch_cw': 'https://ransomwaretracker.abuse.ch/downloads/CW_C2_DOMBL.txt'
-    'ransomwaretracker_abuse_ch_ly': 'https://ransomwaretracker.abuse.ch/downloads/LY_C2_DOMBL.txt'
-    'ransomwaretracker_abuse_ch_tc': 'https://ransomwaretracker.abuse.ch/downloads/TC_C2_DOMBL.txt'
-    'ransomwaretracker_abuse_ch_tl': 'https://ransomwaretracker.abuse.ch/downloads/TL_C2_DOMBL.txt'
     # Spam, Ads
     'Dawsey21': 'https://raw.githubusercontent.com/Dawsey21/Lists/master/main-blacklist.txt'
     # Tracking
@@ -99,9 +71,3 @@ Sources:
     'dshield_org_low': 'https://www.dshield.org/feeds/suspiciousdomains_Low.txt'
     'dshield_org_medium': 'https://www.dshield.org/feeds/suspiciousdomains_Medium.txt'
     'dshield_org_high': 'https://www.dshield.org/feeds/suspiciousdomains_High.txt'
-    # Ads
-    'squidblacklist_org_ads': 'https://www.squidblacklist.org/downloads/dg-ads.acl'
-    # Malware
-    'squidblacklist_org_malicious': 'https://www.squidblacklist.org/downloads/dg-malicious.acl'
-    # Malware
-    'zeustracker_abuse_ch': 'https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist'
