@@ -1,17 +1,12 @@
 Sleep: 750
 
 Sources:
-    # Malware
-    'malwaredomainlist_com': 'https://www.malwaredomainlist.com/hostslist/hosts.txt'
     # General
     'someonewhocares_org': 'https://someonewhocares.org/hosts/hosts'
     # General
     'mvps_org': 'https://winhelp2002.mvps.org/hosts.txt'
     # Ads, Tracking
     'pgl_yoyo_org': 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext'
-    # Malware
-    'malwaredomains_com': 'https://mirror.cedia.org.ec/malwaredomains/justdomains'
-    'malwaredomains_com_immortal': 'https://mirror.cedia.org.ec/malwaredomains/immortal_domains.txt'
     # Adware, Malware
     'StevenBlack_hosts': 'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts'
     # Fraud/adware/scam
@@ -42,8 +37,6 @@ Sources:
     # Spam
     'matomo-org': 'https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt'
     # Ads
-    'vokins': 'https://raw.githubusercontent.com/vokins/yhosts/master/hosts'
-    # Ads
     'reddestdream': 'https://reddestdream.github.io/Projects/MinimalHosts/etc/MinimalHostsBlocker/minimalhosts'
     # Ads
     'disconnect_me_ad': 'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt'
@@ -51,8 +44,6 @@ Sources:
     'disconnect_me_malvertising': 'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt'
     # Ads
     'firebog_net_adguard': 'https://v.firebog.net/hosts/AdguardDNS.txt'
-    # Suspicious
-    'firebog_net_billstearns': 'https://v.firebog.net/hosts/BillStearns.txt'
     # Ads
     'firebog_net_easylist': 'https://v.firebog.net/hosts/Easylist.txt'
     # Tracking
@@ -61,13 +52,7 @@ Sources:
     'firebog_net_prigent_ads': 'https://v.firebog.net/hosts/Prigent-Ads.txt'
     # Malware
     'firebog_net_prigent_malware': 'https://v.firebog.net/hosts/Prigent-Malware.txt'
-    # Phishing
-    'firebog_net_prigent_phishing': 'https://v.firebog.net/hosts/Prigent-Phishing.txt'
-    # Malware
-    'firebog_net_shalla_mal': 'https://v.firebog.net/hosts/Shalla-mal.txt'
     # Suspicious
     'firebog_net_w3kbl': 'https://v.firebog.net/hosts/static/w3kbl.txt'
-    # Suspicious
-    'dshield_org_low': 'https://www.dshield.org/feeds/suspiciousdomains_Low.txt'
-    'dshield_org_medium': 'https://www.dshield.org/feeds/suspiciousdomains_Medium.txt'
-    'dshield_org_high': 'https://www.dshield.org/feeds/suspiciousdomains_High.txt'
+    # General
+    'hagezi': 'https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/ultimate.txt'
